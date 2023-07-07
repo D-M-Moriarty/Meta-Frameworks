@@ -1,0 +1,147 @@
+---
+import cls from '../../public/9mWVASbWDLzdBUpVcjE1.svg'
+import fid from '../../public/eXyvkqRHQZ5iG38Axh1Z.svg'
+import lcp from '../../public/elqsdYqQEefWJbUM2qMO.svg'
+
+const title = "Maximizing Performance in Web Development"
+---
+
+<astro-document>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    li {
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <header>
+    <h1>{title}</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        Welcome to the presentation on maximizing performance in web development. In today's digital landscape,
+        delivering a fast and responsive user experience is crucial for the success of any website. Performance metrics
+        play a vital role in measuring and optimizing the performance of web applications.
+      </p>
+      <p>
+        In this presentation, we will explore the importance of performance metrics and how different frameworks tackle
+        performance issues. We will focus on the following frameworks: Next.js, Remix, Angular Universal, Nuxt.js, Qwik,
+        and SvelteKit. Each of these frameworks offers techniques to optimize performance and enhance user experience.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Web Vitals: Understanding the Metrics</h2>
+      <p>
+        Core Web Vitals are a set of user-centric performance metrics introduced by Google. They measure key aspects of
+        web performance that directly impact user experience. The three main metrics are:
+      </p>
+      <ul>
+        <li>Largest Contentful Paint (LCP): Measures the time it takes for the largest visible element to render on the
+          screen.
+        </li>
+        <img src={lcp} alt="A starry night sky.">
+        <li>Cumulative Layout Shift (CLS): Quantifies the visual stability of a page by measuring unexpected layout
+          shifts.
+        </li>
+        <img src={cls} alt="A starry night sky.">
+        <li>First Input Delay (FID): Evaluates the responsiveness of a page by measuring the delay between a user's
+          first interaction and the browser's response.
+        </li>
+        <img src={fid} alt="A starry night sky.">
+      </ul>
+      <p>
+        Achieving good scores in these metrics is crucial to ensure a smooth and engaging user experience.
+      </p>
+    </section>
+
+    <section>
+      <h2>Framework-Specific Techniques to Improve Performance</h2>
+      <p>
+        Each framework we'll discuss offers unique techniques to enhance performance. Let's explore how these frameworks
+        address performance issues:
+      </p>
+      <ul>
+        <li>Next.js: Server Side Rendering (SSR) and Incremental Static Regeneration (ISR).</li>
+        <li>Remix: Server Side Rendering (SSR) and Static Site Generation (SSG).</li>
+        <li>Angular Universal: Server Side Rendering (SSR).</li>
+        <li>Nuxt.js: Server Side Rendering (SSR) and Static Site Generation (SSG).</li>
+        <li>Qwik: Server Side Rendering (SSR).</li>
+        <li>SvelteKit: Server Side Rendering (SSR) and Static Site Generation (SSG).</li>
+      </ul>
+      <p>
+        These techniques play a crucial role in improving TTFB, FCP, LCP, CLS, and TTI metrics, providing a seamless
+        user experience.
+      </p>
+    </section>
+
+    <section>
+      <h2>Best Practices for Performance Optimization</h2>
+      <p>
+        While each framework has its own optimizations, there are general best practices applicable to all frameworks.
+        These include code splitting, lazy loading, image optimization, caching, and leveraging modern browser features
+        like service workers. Continuously monitoring and optimizing performance is essential to maintain a
+        high-performing web application.
+      </p>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        Maximizing performance in web development is crucial for delivering exceptional user experiences. The frameworks
+        we discussed offer various techniques and strategies to enhance performance and improve user satisfaction. By
+        leveraging the power of these frameworks and implementing best practices, developers can create high-performing
+        web applications that meet the demanding requirements of today's users.
+      </p>
+    </section>
+  </main>
+</astro-document>

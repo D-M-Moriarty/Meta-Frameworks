@@ -1,0 +1,52 @@
+# docker-compose.yml
+version: "3"
+services:
+#  angular-app:
+#    build:
+#      context: ./angular-app
+#    image: angular-app
+#    ports:
+#      - "4200:4200"
+
+  astro-app:
+    build:
+      context: ./astro-app
+    image: astro-app
+    ports:
+      - "3000:3000"
+
+  next-app:
+    build:
+      context: ./next-app
+    image: next-app
+    ports:
+      - "3001:3001"
+
+  nuxt-app:
+    build:
+      context: ./nuxt-app
+    image: nuxt-app
+    ports:
+      - "3002:3002"
+
+  qwik-app:
+    build:
+      context: ./qwik-app
+    image: qwik-app
+    ports:
+      - "3003:3003"
+
+#  remix-app:
+#    build:
+#      context: ./remix-app
+#    image: remix-app
+#    ports:
+#      - "3004:3004"
+
+  svelte-app:
+    build:
+      context: ./svelte-app
+    image: svelte-app
+    ports:
+      - "3005:3005"
+
