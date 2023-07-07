@@ -1,0 +1,26 @@
+swagger: "2.0"
+info:
+  title: Meta Framework API
+  description: Meta Framework API
+  version: 1.0.0
+host: www.googleapis.com
+schemes:
+  - https
+produces:
+  - application/json
+security:
+  - api_key: []
+paths:
+  /astro:
+    x-google-backend:
+      address: https://astro-app-wlyiet7xva-ew.a.run.app/astro/{page}
+      path_translation: APPEND_PATH_TO_ADDRESS
+    get:
+      summary: Get Astro
+      operationId: getAstro
+      parameters:
+        - name: page
+          in: path
+          description: Page
+          required: true
+          type: string

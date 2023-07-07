@@ -8,7 +8,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   server: {
-    port: 3004,
+    port: 8080,
     strictPort: true,
     host: true
   },

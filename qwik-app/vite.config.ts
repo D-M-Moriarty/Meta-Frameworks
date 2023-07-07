@@ -7,7 +7,7 @@ export default defineConfig(() => {
   return {
     plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
     server: {
-      port: 3003,
+      port: 8080,
       strictPort: true,
       host: true
     },
