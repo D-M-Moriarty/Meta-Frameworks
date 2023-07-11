@@ -10,31 +10,31 @@ services:
 
   astro-app:
     build:
-      context: ./astro-app
+      context: ./apps/astro-app
     image: astro-app
     ports:
-      - "3000:3000"
+      - "3000:8080"
 
   next-app:
     build:
-      context: ./next-app
+      context: ./apps/next-app
     image: next-app
     ports:
-      - "3001:3001"
+      - "3001:8080"
 
   nuxt-app:
     build:
-      context: ./nuxt-app
+      context: ./apps/nuxt-app
     image: nuxt-app
     ports:
-      - "3002:3002"
+      - "3002:8080"
 
   qwik-app:
     build:
-      context: ./qwik-app
+      context: ./apps/qwik-app
     image: qwik-app
     ports:
-      - "3003:3003"
+      - "3003:8080"
 
 #  remix-app:
 #    build:
@@ -45,8 +45,8 @@ services:
 
   svelte-app:
     build:
-      context: ./svelte-app
+      context: ./apps/svelte-app
     image: svelte-app
     ports:
-      - "3005:3005"
+      - "3005:8080"
 

@@ -61,5 +61,9 @@ gcloud run deploy <SERVICE_NAME> \
     --allow-unauthenticated \
     --set-env-vars <KEY>=<VALUE>,<KEY>=<VALUE>
 
-# example:
-
+# add iam policy binding to allow api gateway to invoke cloud run service
+gcloud run services add-iam-policy-binding astro-app \
+    --member=serviceAccount:cr-invoker@dmoriarty-sandbox-7ba3.iam.gserviceaccount.com \
+    --role=roles/run.invoker \
+    --platform managed \
+    --region europe-west1

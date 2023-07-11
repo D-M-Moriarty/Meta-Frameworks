@@ -3,21 +3,39 @@ info:
   title: Meta Framework API
   description: Meta Framework API
   version: 1.0.0
-host: www.googleapis.com
+host: meta-framework-gateway-3s4mrx1z.ew.gateway.dev
 schemes:
   - https
 produces:
   - application/json
 security:
   - api_key: []
+#securityDefinitions:
+#  api_key:
+#    type: apiKey
+#    name: key
+#    in: query
 paths:
   /astro:
-    x-google-backend:
-      address: https://astro-app-wlyiet7xva-ew.a.run.app/astro/{page}
-      path_translation: APPEND_PATH_TO_ADDRESS
+      get:
+        x-google-backend:
+          address: https://astro-app-wlyiet7xva-ew.a.run.app/
+          path_translation: CONSTANT_ADDRESS
+        summary: Get Astro
+        operationId: getAstro
+        responses:
+          '200':
+            description: A successful response
+  /{page}:
     get:
+      x-google-backend:
+        address: https://{page}-app-wlyiet7xva-ew.a.run.app/{page}
+        path_translation: CONSTANT_ADDRESS
       summary: Get Astro
       operationId: getAstro
+      responses:
+        '200':
+          description: A successful response
       parameters:
         - name: page
           in: path
