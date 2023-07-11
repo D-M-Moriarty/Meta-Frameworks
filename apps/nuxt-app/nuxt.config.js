@@ -1,6 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    ssr: true,
     title: 'nuxt-app',
     htmlAttrs: {
       lang: 'en'
@@ -37,6 +38,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxt/image'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
