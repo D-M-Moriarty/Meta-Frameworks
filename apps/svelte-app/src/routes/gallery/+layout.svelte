@@ -4,7 +4,7 @@
 
 <div class="navbar bg-base-300">
   <div class="flex-1">
-    <a href="/" class="btn btn-ghost normal-case text-xl">
+    <a href="#" class="btn btn-ghost normal-case text-xl">
       <img src="/images/om.png" width="200" height="300">
     </a>
   </div>
