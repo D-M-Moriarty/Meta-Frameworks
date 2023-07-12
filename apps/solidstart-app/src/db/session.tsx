@@ -21,6 +21,7 @@ export async function login({ username, password }: LoginForm) {
   return user;
 }
 
+// @ts-ignore
 const sessionSecret = import.meta.env.SESSION_SECRET;
 
 const storage = createCookieSessionStorage({
