@@ -29,9 +29,9 @@ services:
     ports:
       - "3002:8080"
 
-  qwik-app:
+  qwikcity-app:
     build:
-      context: ./apps/qwik-app
+      context: ./apps/qwikcity-app
     image: qwik-app
     ports:
       - "3003:8080"
@@ -43,9 +43,9 @@ services:
 #    ports:
 #      - "3004:3004"
 
-  svelte-app:
+  sveltekit-app:
     build:
-      context: ./apps/svelte-app
+      context: ./apps/sveltekit-app
     image: svelte-app
     ports:
       - "3005:8080"
