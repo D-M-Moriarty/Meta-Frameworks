@@ -1,0 +1,276 @@
+---
+import "../global.css";
+import cls from "../../public/9mWVASbWDLzdBUpVcjE1.svg";
+import fid from "../../public/eXyvkqRHQZ5iG38Axh1Z.svg";
+import fid2 from "../../public/fid.svg";
+import lcp from "../../public/elqsdYqQEefWJbUM2qMO.svg";
+import joe from "../../public/joe-loadin.avif";
+import ssr from "../../public/ssr.avif";
+import ssg from "../../public/static.avif";
+import hydrate from "../../public/hydrate.avif";
+import csr from "../../public/csr.avif";
+import islands from "../../public/islands.avif";
+
+import astro from "../../public/astro-icon-dark.svg";
+import next from "../../public/next.svg";
+import analogLogo from "../../public/analog-logo.svg";
+import nuxt from "../../public/nuxt.png";
+import qwik from "../../public/qwik.webp";
+import remix from "../../public/remix.png";
+import solid from "../../public/solid.png";
+import svelte from "../../public/svelte.png";
+import unlighthouse from "../../public/unlighthouse.svg";
+
+title: "Maximizing Web Performance: Exploring Web Vitals and Meta-Frameworks";
+---
+
+<astro-document>
+  <header class="bg-blue-600 py-4 text-white text-center">
+    <h1 class="text-3xl font-semibold">Maximizing Web Performance: Exploring Web Vitals and Meta-Frameworks</h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto py-8 px-4">
+    <!-- Slide 1 - Introduction -->
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Introduction</h2>
+      <p class="text-lg">
+        Welcome to the presentation on maximizing web performance!
+      </p>
+      <ul class="list-disc mt-4 ml-8">
+        <li>Web performance is crucial for exceptional user experiences.</li>
+        <li>Core Web Vitals measure loading speed, visual stability, and interactivity.</li>
+        <li>We'll explore how Meta-Frameworks optimize performance.</li>
+      </ul>
+    </section>
+
+    <!-- Slide 2 - Why Web Vitals Matter -->
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Why Web Vitals Matter</h2>
+      <ul class="list-disc mt-4 ml-8">
+        <li>LCP: Loading speed and user engagement.</li>
+        <li>CLS: Visual stability and user experience.</li>
+        <li>FID: Interactivity and responsiveness.</li>
+        <li>Good Web Vitals scores for a smooth user experience.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold">Core Web Vitals: Understanding the Metrics</h2>
+      <p>
+        Core Web Vitals are a set of user-centric performance metrics introduced by Google. They measure key aspects of
+        web performance that directly impact user experience. The three main metrics are:
+      </p>
+      <ul>
+        <h3 class="text-1xl font-semibold">Largest Contentful Paint (LCP): Measures the time it takes for the largest
+          visible element to render on the
+          screen.
+        </h3>
+        <ul class="list-disc">
+          <li>LCP is a Core Web Vital measuring perceived load speed.</li>
+          <li>It indicates when the main content likely loads, assuring users of page usefulness.</li>
+          <li>Traditional metrics may not capture what users see on the screen.</li>
+          <li>LCP measures when the largest element renders, providing accuracy.</li>
+          <li>Good LCP score: ≤2.5 seconds, poor: >4.0 seconds, in-between needs improvement.</li>
+          <li>Certain heuristics exclude non-contentful elements for better accuracy.</li>
+          <li>LCP may change as the page loads and new elements appear.</li>
+          <li>Interaction stops LCP reporting; analyze the most recent entry for analytics.</li>
+          <li>For cross-origin images, only load time is exposed, not render time.</li>
+        </ul>
+        <img src={lcp} alt="A starry night sky.">
+        <img src={joe} alt="joe">
+        <h3 class="text-1xl font-semibold">First Input Delay (FID): Evaluates the responsiveness of a page by measuring
+          the delay between a user's
+          first interaction and the browser's response.
+        </h3>
+        <ul class="list-disc">
+          <li>FID is a Core Web Vital, measuring load responsiveness and user interactivity.</li>
+          <li>It quantifies how quickly users can interact with pages, ensuring usability.</li>
+          <li>Good FID score: ≤100 milliseconds for a smooth user experience.</li>
+          <li>Consider the 75th percentile of page loads for most users.</li>
+          <li>Long FID occurs between First Contentful Paint (FCP) and Time to Interactive (TTI).</li>
+          <li>Input delay happens when the main thread is busy, causing delayed responses.</li>
+          <li>FID measures time from user interaction to processing event handlers.</li>
+          <li>First impressions are critical; FID shapes a site's quality and reliability.</li>
+          <li>Separate FID from continuous actions like scrolling and zooming.</li>
+          <li>FID should focus on discrete actions like clicks, taps, and key presses.</li>
+          <li>FID can be tracked using the Event Timing API or Total Blocking Time (TBT) in the lab.</li>
+        </ul>
+        <img src={fid} alt="A starry night sky.">
+        <img src={fid2} alt="A starry night sky.">
+        <h3 class="text-1xl font-semibold">Cumulative Layout Shift (CLS): Quantifies the visual stability of a page by
+          measuring unexpected layout
+          shifts.
+        </h3>
+        <ul class="list-disc">
+          <li>CLS is a Core Web Vital, measuring visual stability and user experience.</li>
+          <li>It quantifies how often users face unexpected layout shifts, impacting usability.</li>
+          <li>Layout shifts occur when elements change position between frames.</li>
+          <li>Causes include asynchronous loading and dynamically added elements.</li>
+          <li>CLS addresses differences between development and user experiences.</li>
+          <li>CLS measures the largest burst of layout shift scores during a page's lifespan.</li>
+          <li>A session window contains layout shifts in rapid succession (≤1s between shifts).</li>
+          <li>Good CLS score: ≤0.1 for delightful user experience.</li>
+          <li>Consider the 75th percentile of page loads for most users.</li>
+          <li>An impact fraction measures how unstable elements impact the viewport area.</li>
+          <li>A distance fraction calculates the movement of unstable elements relative to the viewport's dimensions.
+          </li>
+          <li>Respect user interactions and avoid unexpected layout shifts.</li>
+          <li>Animations and transitions can enhance user understanding without surprises.</li>
+        </ul>
+        <figure>
+          <video autoplay="" controls="" height="510" loop="" muted=""
+                 poster="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability-poster.png"
+                 width="658">
+            <source type="video/webm; codecs=vp8"
+                    src="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability2.webm">
+            <source type="video/mp4; codecs=h264"
+                    src="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability2.mp4">
+          </video>
+          <figcaption>A screencast illustrating how layout instability can negatively affect users.</figcaption>
+        </figure>
+        <img src={cls} alt="A starry night sky.">
+      </ul>
+      <p>
+        Achieving good scores in these metrics is crucial to ensure a smooth and engaging user experience.
+      </p>
+    </section>
+
+    <!-- Slide 3 - Rendering Techniques -->
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Rendering Techniques</h2>
+      <ul class="list-disc mt-4 ml-8">
+        <li>Static Website: Pre-rendered HTML and assets, no client-side JavaScript.</li>
+        <li>Multi-Page Apps: Separate HTML pages, traditional navigation.</li>
+        <li>Single Page App (SPA): Single HTML page, content dynamically loaded.</li>
+        <img src={csr} alt="csr">
+        <li><b>Server-Side Rendering with Hydration</b>: Initial server rendering, client takes over.</li>
+        <img src={ssr} alt="ssr">
+        <li>Static Site Generation with Hydration: Pre-rendered static pages, hydration adds interactivity.</li>
+        <img src={ssg} alt="ssg">
+        <li>Incremental Static Regeneration: Periodic updates to pre-rendered pages.</li>
+        <li>Partial Hydration: Selective hydration of specific parts of the page.</li>
+        <img src={hydrate} alt="hydrate">
+        <li>Islands: Combining multiple rendering approaches on one page.</li>
+        <img src={islands} alt="islands">
+        <li>Streaming SSR: Progressive rendering with streaming from server.</li>
+        <video width="100%" src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-1.mp4" autoplay="" controls="" playsinline="" loop="" poster="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-1.jpg"><source src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-1.mp4" type="video/mp4"></video>
+        <video width="100%" src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-2.mp4" autoplay="" controls="" playsinline="" loop="" poster="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-2.jpg"><source src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-2.mp4" type="video/mp4"></video>
+        <li>Resumability: Ability to pause and resume rendering on client.</li>
+      </ul>
+    </section>
+
+    <!-- Slide 4 - Introducing Meta-Frameworks -->
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Introducing Meta-Frameworks</h2>
+      <p class="text-lg">
+        A Meta-Framework is a higher-level framework that brings together multiple underlying frameworks to offer a unified and versatile development experience. Today, we'll focus on six popular Meta-Frameworks:
+      </p>
+      <ul class="list-disc mt-4 ml-8">
+        <li>Astro</li>
+        <img src={astro} alt="astro">
+        <li>Next.js</li>
+        <img src={next} alt="next">
+        <li>Analog</li>
+        <img src={analogLogo} alt="analog">
+        <li>Nuxt</li>
+        <img src={nuxt} alt="nuxt">
+        <li>QwikCity</li>
+        <img src={qwik} alt="qwik">
+        <li>Remix</li>
+        <img src={remix} alt="remix">
+        <li>SolidStart</li>
+        <img src={solid} alt="solid">
+        <li>SvelteKit</li>
+        <img src={svelte} alt="svelte">
+      </ul>
+    </section>
+
+    <!-- Slide 5 - Meta-Frameworks and Web Vitals -->
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Meta-Frameworks and Web Vitals</h2>
+      <!-- Key points for each Meta-Framework and its rendering techniques -->
+      <!-- Example for Next.js -->
+      <h3 class="text-xl font-semibold mt-4">Next.js</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>Versatile framework with built-in SSR and ISR for improved Largest Contentful Paint (LCP) through pre-rendering.</li>
+        <li>Efficient client-side hydration ensures smooth Cumulative Layout Shift (CLS) and First Input Delay (FID).</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-4">Remix</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>Embraces SSR and SSG for optimized LCP and pre-rendered content.</li>
+        <li>Careful client-side rendering minimizes CLS and FID for responsive interactions.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-4">Angular Universal</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>Specializes in SSR to improve LCP and overall Time to First Byte (TTFB).</li>
+        <li>Leveraging SSR enhances user experience with minimized CLS and FID for smooth and stable interactions.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-4">Nuxt.js</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>Excels in both SSR and SSG, providing fast LCP and TTFB.</li>
+        <li>Optimized client-side hydration reduces CLS and FID for improved user experience.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-4">Qwik</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>Focuses on SSR for fast TTFB and LCP with pre-rendered content.</li>
+        <li>Managed client-side rendering reduces CLS and FID, ensuring a seamless user experience.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-4">SvelteKit</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>Embraces both SSR and SSG for efficient LCP and TTFB.</li>
+        <li>Optimized client-side hydration addresses CLS and FID, providing an interactive user experience.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-4">Astro</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>A modern framework with a focus on web vitals and performance optimization.</li>
+        <li>Astro empowers developers to enhance web vitals through its support for Server-Side Rendering (SSR) and Static Site Generation (SSG).</li>
+        <li>By leveraging SSR, Astro ensures improved Largest Contentful Paint (LCP) through pre-rendering, reducing the time it takes for content to become visible.</li>
+        <li>Additionally, Astro emphasizes optimized client-side hydration to achieve smooth Cumulative Layout Shift (CLS) and First Input Delay (FID), leading to a delightful user experience.</li>
+      </ul>
+
+      <!-- Slide 12 - Analog -->
+      <h3 class="text-xl font-semibold mt-4">Analog</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>A feature-rich framework designed to boost web vitals and user-centric performance.</li>
+        <li>Analog embraces Server-Side Rendering (SSR) and Static Site Generation (SSG) to optimize Largest Contentful Paint (LCP) by pre-rendering content during the build process.</li>
+        <li>With careful client-side rendering, Analog minimizes Cumulative Layout Shift (CLS) and First Input Delay (FID), ensuring responsive interactions and an exceptional user experience.</li>
+      </ul>
+
+      <!-- Slide 13 - Solid -->
+      <h3 class="text-xl font-semibold mt-4">Solid</h3>
+      <ul class="list-disc mt-2 ml-8">
+        <li>A robust framework that emphasizes web vitals and smooth user interactions.</li>
+        <li>Solid adopts Server-Side Rendering (SSR) and Static Site Generation (SSG) to deliver fast Largest Contentful Paint (LCP) and Time to First Byte (TTFB).</li>
+        <li>By optimizing client-side hydration, Solid effectively addresses Cumulative Layout Shift (CLS) and First Input Delay (FID), providing users with an interactive and reliable browsing experience.</li>
+      </ul>
+      <!-- Continue with key points for Remix, Angular Universal, Nuxt.js, Qwik, and SvelteKit -->
+
+    </section>
+
+    <!-- Slide 6 - Lighthouse Performance Testing -->
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Lighthouse Performance Testing <img src={unlighthouse} alt="un" /> </h2>
+      <p class="mt-4 ml-8">
+        Lighthouse is a powerful tool for assessing website performance and optimizing web vitals. It allows us to test each Meta-Framework's web page and obtain valuable insights into Core Web Vitals scores and other essential metrics. With data-driven decisions based on Lighthouse reports, we can make informed choices to further improve the performance and user experience of our websites.
+      </p>
+      <ul class="list-disc mt-4 ml-8">
+        <li>Lighthouse assesses website performance:</li>
+        <li>Test each Meta-Framework's web page.</li>
+        <li>Focus on Core Web Vitals scores and other metrics.</li>
+        <li>Data-driven decisions for performance optimization.</li>
+      </ul>
+    </section>
+
+    <!-- Slide 7 - Conclusion -->
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Conclusion</h2>
+      <ul class="list-disc mt-4 ml-8">
+        <li>Maximizing web performance leads to exceptional user experiences.</li>
+        <li>Understanding Web Vitals helps optimize website performance.</li>
+        <li>Meta-Frameworks offer unique techniques for Core Web Vitals.</li>
+        <li>Continuous monitoring and optimization are essential for success.</li>
+      </ul>
+    </section>
+
+  </main>
+</astro-document>
