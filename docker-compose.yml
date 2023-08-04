@@ -50,3 +50,10 @@ services:
     ports:
       - "3005:8080"
 
+  ng-analog-app:
+    build:
+      context: ./apps/ng-analog-app
+    image: ng-analog-app
+    ports:
+      - "3006:8080"
+
