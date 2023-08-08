@@ -4,8 +4,8 @@
 #SERVICES=("astro-app" "next-app" "nuxt-app" "qwik-app" "remix-app" "svelte-app")
 SERVICES=(
 #"astro-app"
-#"next-app"
-"ng-analog-app"
+"next-app"
+#"ng-analog-app"
 #"nuxt3-app"
 #"qwikcity-app"
 #"sveltekit-app"
