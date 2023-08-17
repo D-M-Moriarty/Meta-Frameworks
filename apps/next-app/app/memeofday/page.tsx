@@ -31,7 +31,7 @@ export default async function MemeOfTheDayPage() {
       creator: true
     }
   });
-
+  console.warn(memeOfTheDay)
   return (
     <div className="mx-auto px-6 sm:px-12 md:px-24 lg:px-32 max-w-7xl">
       <h1 className="text-4xl font-bold text-center text-gray-700 my-8">Meme of the Day</h1>

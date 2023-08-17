@@ -1,7 +1,7 @@
 import type { PageLoad } from './$types';
 
 export const prerender = true;
-
+// 4100 - 979
 export const load = (async () => {
   let memes = [
     {
@@ -126,6 +126,8 @@ export const load = (async () => {
       "creator": "John Doe"
     }
   ];
+  // 6.69 apr - 8475.88
+  //  photo id,
 
   async function fetchMemeOfTheDay() {
     return new Promise(resolve => {
