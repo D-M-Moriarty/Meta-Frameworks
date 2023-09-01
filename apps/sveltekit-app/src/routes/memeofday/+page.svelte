@@ -1,5 +1,4 @@
 <script lang="ts">
-  export const prerender = true;
   import "../../app.css";
   import type { PageData } from './$types';
 

@@ -37,7 +37,7 @@ export default {
             tags: ["Doge", "Happy", "Funny"],
             created_at: "2023-01-01T00:00:00Z",
             updated_at: "2023-01-01T00:00:00Z",
-            creator: "John Doe"
+            creator: "John Doge"
           });
         }, 2000); // 2000 ms delay
       });

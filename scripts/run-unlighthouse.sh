@@ -1,15 +1,23 @@
 #!/bin/bash
 
-# run unlighthouse
-#npx unlighthouse --site https://next-app-wlyiet7xva-ew.a.run.app/ -- --perf=80 --pwa=80 --a11y=80 --bp=80 --seo=80 --report=./next-app/report.html
+cd ..
 
-PROJECT_ID=dmoriarty-sandbox-7ba3
+# Using an associative array to map the base URLs to their corresponding endpoints.
+declare -A SITES
+SITES=(
+    ["https://astro-app-wlyiet7xva-ew.a.run.app"]="/"
+    ["https://next-app-wlyiet7xva-ew.a.run.app"]="/memeofday,/memegallery"
+    ["https://ng-analog-app-wlyiet7xva-ew.a.run.app"]="/memeofday,/memegallery"
+    ["https://nuxt3-app-wlyiet7xva-ew.a.run.app"]="/memeofday,/memegallery"
+    ["https://sveltekit-app-wlyiet7xva-ew.a.run.app"]="/memeofday,/memegallery"
+)
 
-# Fetch all running Cloud Run service URLs
-URLS=$(gcloud run services list --platform managed --project $PROJECT_ID --format json | jq -r '.[].status.address.url')
+# Iterate over the base URLs and launch the unlighthouse tool in the background for each.
+for SITE in "${!SITES[@]}"; do
+    npx unlighthouse --site "$SITE" --urls "${SITES[$SITE]}" &
+done
 
-# Format the URLs into a comma-separated list
-URL_LIST=$(echo $URLS | tr ' ' ',')
+# Wait for all backgrounded unlighthouse commands to complete.
+wait
 
-# Run lighthouse-batch with the URLs
-npx unlighthouse --sites $URL_LIST
+echo "All scans are complete."

@@ -7,10 +7,11 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   output: "server",
   server: {
-    port: 3000
+    // port: 8080
   },
   adapter: node({
-    mode: "standalone"
+    mode: "standalone",
+    // port: 8080
   }),
   integrations: [tailwind()]
 });

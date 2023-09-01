@@ -1,7 +1,7 @@
 FROM node:18-alpine
 WORKDIR /app
 COPY . .
-RUN npm install --omit=dev
+RUN npm install
 RUN npx prisma generate
 EXPOSE 3000
 EXPOSE 8080

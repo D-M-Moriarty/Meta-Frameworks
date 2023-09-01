@@ -1,10 +1,13 @@
 <script setup>
 // Server Side
 
+import Header from "~/components/Header.vue";
+
 const { data: memes } = useFetch('/api/memes');
 </script>
 
 <template>
+  <Header />
   <div>
     <h1 class="text-center text-3xl my-10">Meme Gallery</h1>
     <div
@@ -20,7 +23,6 @@ const { data: memes } = useFetch('/api/memes');
         <h2 class="card-title">{{ meme.title }}</h2>
         <p>{{ meme.description }}</p>
         <div class="card-actions">
-          <!-- You can replace this button with relevant functionality if required -->
           <button class="btn btn-primary">Like</button>
         </div>
       </div>

@@ -1,7 +1,6 @@
 // src/routes/+page.server.ts
-
+import type { PageServerLoad } from "./$types";
 import { prisma } from "../../../lib/prisma";
-import type { PageServerLoad } from "../gallery/$types";
 
 export const load = (async () => {
   const memeOfTheDay = await prisma.meme.findUnique({

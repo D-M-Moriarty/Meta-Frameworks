@@ -1,81 +1,506 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import "../global.css";
+import cls from "../../public/9mWVASbWDLzdBUpVcjE1.svg";
+import fid from "../../public/eXyvkqRHQZ5iG38Axh1Z.svg";
+import fid2 from "../../public/fid.svg";
+import lcp from "../../public/elqsdYqQEefWJbUM2qMO.svg";
+import joe from "../../public/joe-loadin.avif";
+import ssr from "../../public/ssr.avif";
+import ssg from "../../public/static.avif";
+import hydrate from "../../public/hydrate.avif";
+import csr from "../../public/csr.avif";
+import islands from "../../public/islands.avif";
+
+import astro from "../../public/astro-icon-dark.svg";
+import next from "../../public/nextjs-logo.svg";
+import analogLogo from "../../public/analog-logo.svg";
+import nuxt from "../../public/nuxt.png";
+import qwik from "../../public/qwik.webp";
+import remix from "../../public/remix.svg";
+import solid from "../../public/solid.png";
+import svelte from "../../public/svelte.png";
+import unlighthouse from "../../public/unlighthouse.svg";
+import loadingImage from "../../public/loading-image.avif";
+
+import loadingSpinner from "../../public/loading-spinner.gif";
+import webVitals from "../../public/web-vitals.png";
+import demo from "../../public/demo.jpg";
+import Countdown from "../components/Countdown.astro";
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+<astro-document>
+	<!--<Header/>-->
+	<header class="bg-blue-600 py-4 text-white text-center">
+		<h1 class="text-3xl font-semibold">Maximizing Web Performance: Exploring Web Vitals and Meta-Frameworks</h1>
+	</header>
+	<main class="max-w-4xl mx-auto py-8 px-4">
+		<swiper-container>
+			<swiper-slide>
+				<!-- Slide 1 - Introduction -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Introduction</h2>
+					<!-- Powerful quote or statistic -->
+					<blockquote class="text-lg italic mt-4">
+						"53% of mobile site visitors leave a page that takes longer than three seconds to load."
+					</blockquote>
+					<p class="text-lg mt-4">
+						Welcome to the presentation on maximizing web performance!
+					</p>
+					<ul class="list-disc mt-4 ml-8">
+						<li>Web performance is crucial for exceptional user experiences.</li>
+						<li>Core Web Vitals measure loading speed, visual stability, and interactivity.</li>
+						<li>We'll explore how Meta-Frameworks optimize performance.</li>
+					</ul>
+					<div class="parent">
+						<img src={loadingImage} alt="loading-image">
+						<img class="image2" src={loadingSpinner} alt="loading-spinner" />
+					</div>
+				</section>
+			</swiper-slide>
+			<swiper-slide>
+				<!-- Slide 2 - Why Web Vitals Matter -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Why Web Vitals Matter</h2>
+					<img src={webVitals} alt="web-vitals">
+					<ul class="list-disc mt-4 ml-8">
+						<li><b>LCP</b>: Loading speed and user engagement.</li>
+						<li><b>FID</b>: Interactivity and responsiveness.</li>
+						<li><b>CLS</b>: Visual stability and user experience.</li>
+						<li>Good Web Vitals scores for a smooth user experience.</li>
+					</ul>
+				</section>
+			</swiper-slide>
+
+			<swiper-slide>
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Core Web Vitals: Understanding the Metrics</h2>
+					<p class="mb-6">
+						Core Web Vitals are user-centric performance metrics introduced by Google. They directly impact user experience. The three main metrics are:
+					</p>
+					<ul>
+						<li>
+							<h3 class="text-1xl font-semibold">Largest Contentful Paint (LCP)</h3>
+							<p>
+								Measures the time it takes for the largest visible element to render on the screen. LCP is a Core Web Vital that measures perceived load speed and user engagement.
+							</p>
+							<img src={lcp} alt="A starry night sky." class="mb-4">
+							<img src={joe} alt="joe" class="mb-10">
+						</li>
+						<li>
+							<h3 class="text-1xl font-semibold">First Input Delay (FID)</h3>
+							<p>
+								Evaluates the responsiveness of a page by measuring the delay between a user's first interaction and the browser's response. FID is a Core Web Vital that quantifies load responsiveness and user interactivity.
+							</p>
+							<img src={fid} alt="A starry night sky." class="mb-4">
+							<img src={fid2} alt="A starry night sky." class="mb-10">
+						</li>
+						<li>
+							<h3 class="text-1xl font-semibold">Cumulative Layout Shift (CLS)</h3>
+							<p>
+								Quantifies the visual stability of a page by measuring unexpected layout shifts. CLS is a Core Web Vital that addresses user experience by reducing unexpected layout changes.
+							</p>
+							<img src={cls} alt="A starry night sky." class="mb-4">
+						</li>
+					</ul>
+					<figure>
+						<video autoplay="" controls="" height="510" loop="" muted=""
+									 poster="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability-poster.png"
+									 width="658">
+							<source type="video/webm; codecs=vp8"
+											src="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability2.webm">
+							<source type="video/mp4; codecs=h264"
+											src="https://storage.googleapis.com/web-dev-assets/layout-instability-api/layout-instability2.mp4">
+						</video>
+						<figcaption>Layout instability's negative impact.</figcaption>
+					</figure>
+					<p>
+						Achieving good scores in these metrics is crucial to ensure a smooth and engaging user experience.
+					</p>
+				</section>
+
+
+			</swiper-slide>
+
+			<swiper-slide>
+				<!-- Slide X - Interactivity: Core Web Vitals Quiz -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Interactivity: Core Web Vitals Quiz</h2>
+					<p class="text-lg mt-4">
+						Let's test your knowledge about Core Web Vitals!
+					</p>
+					<ul class="list-disc mt-4 ml-8">
+						<li>Question 1: What does FID measure?</li>
+						<li>Question 2: What does CLS quantify?</li>
+						<li>Question 3: How is LCP calculated?</li>
+					</ul>
+				</section>
+			</swiper-slide>
+
+			<swiper-slide>
+				<section>
+					<h1>Group Think &#129504;</h1>
+					<Countdown />
+				</section>
+			</swiper-slide>
+			<swiper-slide>
+				<!-- Slide Y - Interactivity: Core Web Vitals Quiz Answers -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Interactivity: Core Web Vitals Quiz Answers</h2>
+					<ul class="list-disc mt-4 ml-8">
+						<li>Question 1: What does FID measure?</li>
+						<p class="ml-8">Answer: FID measures the delay between a user's first interaction and the browser's response.</p>
+						<li>Question 2: What does CLS quantify?</li>
+						<p class="ml-8">Answer: CLS quantifies the visual stability of a page by measuring unexpected layout shifts.</p>
+						<li>Question 3: How is LCP calculated?</li>
+						<p class="ml-8">Answer: LCP is calculated as the time it takes for the largest visible element to render on the screen.</p>
+					</ul>
+				</section>
+			</swiper-slide>
+			<!--<swiper-slide>-->
+			<!--	&lt;!&ndash; Slide Z - Real-world Examples: Case Study &ndash;&gt;-->
+			<!--	<section class="my-8">-->
+			<!--		<h2 class="text-2xl font-semibold">Real-world Examples: Case Study</h2>-->
+			<!--		<p class="text-lg mt-4">-->
+			<!--			Let's take a look at a real-world example of performance improvement.-->
+			<!--		</p>-->
+			<!--		<h3 class="text-xl font-semibold mt-4">Website: Example.com</h3>-->
+			<!--		<p class="mt-2">-->
+			<!--			Before optimization, Example.com faced challenges with slow loading times and layout shifts.-->
+			<!--		</p>-->
+			<!--		<div class="mt-4 grid grid-cols-3 gap-6">-->
+			<!--			<div class="col-span-1">-->
+			<!--				<h4 class="text-lg font-semibold">Metrics</h4>-->
+			<!--				<ul class="list-disc mt-2">-->
+			<!--					<li>LCP: Before - 4.5s</li>-->
+			<!--					<li>FID: Before - 150ms</li>-->
+			<!--					<li>CLS: Before - 0.25</li>-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div class="col-span-1">-->
+			<!--				<h4 class="text-lg font-semibold">Strategies</h4>-->
+			<!--				<ul class="list-disc mt-2">-->
+			<!--					<li>Optimized image sizes</li>-->
+			<!--					<li>Reduced third-party scripts</li>-->
+			<!--					<li>Implemented lazy loading</li>-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div class="col-span-1">-->
+			<!--				<h4 class="text-lg font-semibold">Results</h4>-->
+			<!--				<ul class="list-disc mt-2">-->
+			<!--					<li>LCP: After - 2.0s</li>-->
+			<!--					<li>FID: After - 60ms</li>-->
+			<!--					<li>CLS: After - 0.05</li>-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--		</div>-->
+			<!--		<p class="mt-4">-->
+			<!--			By implementing these strategies, Example.com significantly improved its Core Web Vitals scores,-->
+			<!--			resulting in a better user experience and increased user engagement.-->
+			<!--		</p>-->
+			<!--	</section>-->
+			<!--</swiper-slide>-->
+			<swiper-slide>
+				<!-- Slide 3 - Rendering Techniques -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Rendering Techniques</h2>
+					<ul class="list-disc mt-4 ml-8">
+						<li><b>Static Website</b>: Pre-rendered HTML and assets, no client-side JavaScript.</li>
+						<li><b>Multi-Page Apps</b>: Separate HTML pages, traditional navigation.</li>
+						<li><b>Single Page App (SPA)</b>: Single HTML page, content dynamically loaded.</li>
+						<img src={csr} alt="csr">
+						<li><b>Server-Side Rendering with Hydration</b>: Initial server rendering, client takes over.</li>
+						<img src={ssr} alt="ssr">
+						<li><b>Static Site Generation with Hydration</b>: Pre-rendered static pages, hydration adds interactivity.
+						</li>
+						<img src={ssg} alt="ssg">
+						<li><b>Incremental Static Regeneration</b>: Periodic updates to pre-rendered pages.</li>
+						<li><b>Partial Hydration</b>: Selective hydration of specific parts of the page.</li>
+						<img src={hydrate} alt="hydrate">
+						<li><b>Islands</b>: Combining multiple rendering approaches on one page.</li>
+						<img src={islands} alt="islands">
+						<li><b>Streaming SSR</b>: Progressive rendering with streaming from server.</li>
+						<video width="100%"
+									 src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-1.mp4"
+									 autoplay="" controls="" playsinline="" loop=""
+									 poster="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-1.jpg">
+							<source src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-1.mp4"
+											type="video/mp4">
+						</video>
+						<video width="100%"
+									 src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-2.mp4"
+									 autoplay="" controls="" playsinline="" loop=""
+									 poster="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-2.jpg">
+							<source src="https://res.cloudinary.com/ddxwdqwkr/video/upload/f_auto/v1609056525/patterns.dev/ssr-2.mp4"
+											type="video/mp4">
+						</video>
+						<li><b>Resumability</b>: Ability to pause and resume rendering on client.</li>
+					</ul>
+				</section>
+			</swiper-slide>
+			<swiper-slide>
+				<!-- Slide Y - Use Case Scenarios -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Use Case Scenarios</h2>
+					<p class="text-lg mt-4">
+						Let's explore specific use case scenarios where different rendering techniques and Meta-Frameworks excel
+						in terms of optimizing web performance.
+					</p>
+					<h3 class="text-xl font-semibold mt-4">Server-Side Rendering (SSR)</h3>
+					<p class="mt-2">
+						SSR is ideal for websites that require fast Time to First Byte (TTFB), such as news websites and e-commerce
+						platforms. It ensures that users see content quickly and offers SEO benefits.
+					</p>
+					<h3 class="text-xl font-semibold mt-4">Static Site Generation (SSG)</h3>
+					<p class="mt-2">
+						SSG is well-suited for content-focused websites like blogs and documentation sites. Pre-rendered static pages
+						lead to fast loading times and improved user experiences.
+					</p>
+					<h3 class="text-xl font-semibold mt-4">Hybrid Approaches</h3>
+					<p class="mt-2">
+						Hybrid approaches, such as Server-Side Rendering with Hydration, combine the benefits of both SSR and SSG.
+						They work well for applications with dynamic components and interactive elements.
+					</p>
+					<h3 class="text-xl font-semibold mt-4">Meta-Frameworks</h3>
+					<p class="mt-2">
+						Different Meta-Frameworks excel in various scenarios. For example, Astro's focus on web vitals and performance
+						optimization makes it a strong choice for projects prioritizing user experience.
+					</p>
+				</section>
+			</swiper-slide>
+			<swiper-slide>
+				<!-- Slide 4 - Introducing Meta-Frameworks -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Introducing Meta-Frameworks</h2>
+					<p class="text-lg">
+						A Meta-Framework is a higher-level framework that brings together multiple underlying frameworks to offer a
+						unified and versatile development experience. These frameworks blur the lines between frontend and backend by allowing you to run both aspects from a single server, streamlining development and deployment processes:
+					</p>
+					<ul class="list-disc mt-4 ml-8">
+						<li class="flex items-center">Astro <img class="framework-logo" src={astro} alt="astro"></li>
+						<li class="flex items-center">Next.js <img class="framework-logo" src={next} alt="next"></li>
+						<li class="flex items-center">Analog <img class="framework-logo" src={analogLogo} alt="analog"></li>
+						<li class="flex items-center">Nuxt <img class="framework-logo" src={nuxt} alt="nuxt"></li>
+						<li class="flex items-center">QwikCity <img class="framework-logo" src={qwik} alt="qwik"></li>
+						<li class="flex items-center">Remix <img class="framework-logo" src={remix} alt="remix"></li>
+						<li class="flex items-center">SolidStart <img class="framework-logo" src={solid} alt="solid"></li>
+						<li class="flex items-center">SvelteKit <img class="framework-logo" src={svelte} alt="svelte"></li>
+					</ul>
+				</section>
+
+			</swiper-slide>
+			<swiper-slide>
+				<!-- Slide 5 - Meta-Frameworks and Web Vitals -->
+				<section class="my-8">
+					<h3 class="text-xl font-semibold mt-4">Next.js</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>Versatile framework with built-in <strong>SSR</strong> and <strong>ISR</strong> for improved <strong>Largest Contentful Paint (LCP)</strong> through
+							pre-rendering.</li>
+						<li>Efficient client-side hydration ensures smooth <strong>Cumulative Layout Shift (CLS)</strong> and <strong>First Input Delay
+							(FID)</strong>.</li>
+					</ul>
+
+					<!-- Nuxt.js -->
+					<h3 class="text-xl font-semibold mt-4">Nuxt.js</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>Excels in both <strong>SSR</strong> and <strong>SSG</strong>, providing fast <strong>LCP</strong> and <strong>TTFB</strong>.</li>
+						<li>Optimized client-side hydration reduces <strong>CLS</strong> and <strong>FID</strong> for improved user experience.</li>
+					</ul>
+
+					<!-- SvelteKit -->
+					<h3 class="text-xl font-semibold mt-4">SvelteKit</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>Embraces both <strong>SSR</strong> and <strong>SSG</strong> for efficient <strong>LCP</strong> and <strong>TTFB</strong>.</li>
+						<li>Optimized client-side hydration addresses <strong>CLS</strong> and <strong>FID</strong>, providing an interactive user experience.</li>
+					</ul>
+
+					<!-- Astro -->
+					<h3 class="text-xl font-semibold mt-4">Astro</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>A modern framework with a focus on web vitals and performance optimization.</li>
+						<li><strong>Astro</strong> empowers developers to enhance web vitals through its support for <strong>Server-Side Rendering (SSR)</strong> and
+							<strong>Static Site Generation (SSG)</strong>.</li>
+						<li>By leveraging <strong>SSR</strong>, <strong>Astro</strong> ensures improved <strong>LCP</strong> through pre-rendering, reducing
+							the time it takes for content to become visible.</li>
+						<li>Additionally, <strong>Astro</strong> emphasizes optimized client-side hydration to achieve smooth <strong>CLS</strong> and <strong>FID</strong>,
+							leading to a delightful user experience.</li>
+					</ul>
+					<h3 class="text-xl font-semibold mt-4">Remix</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>Embraces SSR and SSG for optimized LCP and pre-rendered content.</li>
+						<li>Careful client-side rendering minimizes CLS and FID for responsive interactions.</li>
+					</ul>
+					<h3 class="text-xl font-semibold mt-4">Angular Universal</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>Specializes in SSR to improve LCP and overall Time to First Byte (TTFB).</li>
+						<li>Leveraging SSR enhances user experience with minimized CLS and FID for smooth and stable interactions.
+						</li>
+					</ul>
+					<h3 class="text-xl font-semibold mt-4">Qwik</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>Focuses on SSR for fast TTFB and LCP with pre-rendered content.</li>
+						<li>Managed client-side rendering reduces CLS and FID, ensuring a seamless user experience.</li>
+					</ul>
+					<!-- Slide 12 - Analog -->
+					<h3 class="text-xl font-semibold mt-4">Analog</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>A feature-rich framework designed to boost web vitals and user-centric performance.</li>
+						<li>Analog embraces Server-Side Rendering (SSR) and Static Site Generation (SSG) to optimize Largest
+							Contentful
+							Paint (LCP) by pre-rendering content during the build process.
+						</li>
+						<li>With careful client-side rendering, Analog minimizes Cumulative Layout Shift (CLS) and First Input Delay
+							(FID), ensuring responsive interactions and an exceptional user experience.
+						</li>
+					</ul>
+
+					<!-- Slide 13 - Solid -->
+					<h3 class="text-xl font-semibold mt-4">Solid</h3>
+					<ul class="list-disc mt-2 ml-8">
+						<li>A robust framework that emphasizes web vitals and smooth user interactions.</li>
+						<li>Solid adopts Server-Side Rendering (SSR) and Static Site Generation (SSG) to deliver fast Largest
+							Contentful
+							Paint (LCP) and Time to First Byte (TTFB).
+						</li>
+						<li>By optimizing client-side hydration, Solid effectively addresses Cumulative Layout Shift (CLS) and First
+							Input Delay (FID), providing users with an interactive and reliable browsing experience.
+						</li>
+					</ul>
+				</section>
+			</swiper-slide>
+			<swiper-slide>
+				<!-- Slide 6 - Lighthouse Performance Testing -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Lighthouse Performance Testing <img src={unlighthouse} alt="un" /></h2>
+					<p class="mt-4 ml-8">
+						<strong>Lighthouse</strong> assesses website performance and Core Web Vitals for each Meta-Framework.
+						Data-driven decisions from Lighthouse reports enhance performance and user experience.
+					</p>
+					<ul class="list-disc mt-4 ml-8">
+						<li>Assesses performance and Core Web Vitals</li>
+						<li>Data-driven decisions enhance performance</li>
+					</ul>
+					<img class="mt-5" src="../../public/lighthouse-sc.png" alt="none"/>
+				</section>
+			</swiper-slide>
+			<swiper-slide>
+				<!-- Slide X - Demo: Using Lighthouse for Performance Analysis -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Demo: Using Lighthouse for Performance Analysis</h2>
+					<img src={demo} alt="demo">
+				</section>
+			</swiper-slide>
+
+
+			<!--<swiper-slide>-->
+			<!--	&lt;!&ndash; Slide Z - Comparison of Meta-Frameworks &ndash;&gt;-->
+			<!--	<section class="my-8">-->
+			<!--		<h2 class="text-2xl font-semibold">Comparison of Meta-Frameworks</h2>-->
+			<!--		<p class="text-lg mt-4">-->
+			<!--			Let's take a concise look at the advantages and limitations of each Meta-Framework's approach to handling-->
+			<!--			web performance.-->
+			<!--		</p>-->
+			<!--		<div class="grid grid-cols-2 gap-6 mt-6">-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">Next.js</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					<li>Versatile with built-in SSR and ISR for improved LCP through pre-rendering.</li>-->
+			<!--					<li>Efficient client-side hydration ensures smooth CLS and FID.</li>-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">Astro</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					<li>Focus on web vitals and performance optimization.</li>-->
+			<!--					<li>Supports SSR and SSG.</li>-->
+			<!--					<li>Emphasizes optimized client-side hydration for smooth CLS and FID.</li>-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">Analog</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					<li>Feature-rich framework designed to boost web vitals and performance.</li>-->
+			<!--					<li>Utilizes SSR and SSG to optimize LCP through pre-rendering.</li>-->
+			<!--					<li>Careful client-side rendering minimizes CLS and FID for responsive interactions.</li>-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">Nuxt.js</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					<li>Excels in both SSR and SSG, providing fast LCP and TTFB.</li>-->
+			<!--					<li>Optimized client-side hydration reduces CLS and FID for improved user experience.</li>-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">QwikCity</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					&lt;!&ndash; Add QwikCity's advantages and limitations here &ndash;&gt;-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">Remix</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					&lt;!&ndash; Add Remix's advantages and limitations here &ndash;&gt;-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">SolidStart</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					&lt;!&ndash; Add SolidStart's advantages and limitations here &ndash;&gt;-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--			<div>-->
+			<!--				<h3 class="text-xl font-semibold">SvelteKit</h3>-->
+			<!--				<ul class="list-disc mt-2 ml-6">-->
+			<!--					&lt;!&ndash; Add SvelteKit's advantages and limitations here &ndash;&gt;-->
+			<!--				</ul>-->
+			<!--			</div>-->
+			<!--		</div>-->
+			<!--	</section>-->
+			<!--</swiper-slide>-->
+
+
+			<swiper-slide>
+				<!-- Slide 7 - Conclusion -->
+				<section class="my-8">
+					<h2 class="text-2xl font-semibold">Conclusion</h2>
+					<ul class="list-disc mt-4 ml-8">
+						<li>Maximizing web performance leads to exceptional user experiences.</li>
+						<li>Understanding Web Vitals helps optimize website performance.</li>
+						<li>Meta-Frameworks offer unique techniques for Core Web Vitals.</li>
+						<li>Continuous monitoring and optimization are essential for success.</li>
+					</ul>
+				</section>
+			</swiper-slide>
+		</swiper-container>
 	</main>
-</Layout>
+</astro-document>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+
+	.framework-logo {
+		height: 50px; /* This will maintain the aspect ratio of the image */
+		vertical-align: middle; /* Aligns the image vertically in line with the text */
+		margin-left: 10px; /* Optional: Adds some spacing between the text and the image */
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+
+	.parent {
+		position: relative;
+		top: 0;
+		left: 0;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.image1 {
+		position: relative;
+		top: 0;
+		left: 0;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+
+	.image2 {
+		position: absolute;
+		top: 200px;
+		left: 200px;
 	}
 </style>

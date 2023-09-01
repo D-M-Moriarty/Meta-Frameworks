@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--build-arg', 'DATABASE_URL=$_DATABASE_URL', '-t', 'europe-west1-docker.pkg.dev/dmoriarty-sandbox-7ba3/meta-framework-images/$SERVICE:tag2', '.']
+images:
+- 'europe-west1-docker.pkg.dev/dmoriarty-sandbox-7ba3/meta-framework-images/$SERVICE:tag2'

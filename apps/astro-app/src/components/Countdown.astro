@@ -1,0 +1,50 @@
+---
+const DURATION = 15;
+import zero from '../../public/zero.jpeg';
+---
+
+<div class="flex items-center justify-center h-screen">
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4" id="countdownContainer">
+    <div class="text-xl font-medium text-black" id="timer">
+      <time>{DURATION}</time> seconds left
+    </div>
+    <img src={zero} alt="Zero image" id="zeroImage" style="display: none;">
+  </div>
+  <script type="module">
+    const DURATION = 15;
+    let timeLeft = DURATION;
+    const timeElement = document.getElementById('timer');
+    const zeroImageElement = document.getElementById('zeroImage');
+    let interval;
+
+    const displayImage = () => {
+      timeElement.style.display = 'none';       // Hide the timer
+      zeroImageElement.style.display = 'block'; // Display the image
+    };
+
+    const startCountdown = () => {
+      if (interval) return;  // Ensure we don't start the countdown more than once
+
+      interval = setInterval(() => {
+        timeLeft -= 1;
+        timeElement.textContent = timeLeft + ' seconds left';
+
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          displayImage();
+        }
+      }, 1000);
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCountdown();
+          observer.unobserve(countdownContainer);  // Once we start the countdown, no need to keep observing
+        }
+      });
+    });
+
+    observer.observe(countdownContainer);
+  </script>
+</div>

@@ -1,7 +1,7 @@
 import { prisma } from '../data/prisma';
 
 export default defineEventHandler(async event => {
-    return await prisma.meme.findMany({
+    return prisma.meme.findMany({
       select: {
         id: true,
         title: true,

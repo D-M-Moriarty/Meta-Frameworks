@@ -1,6 +1,4 @@
 
-Sure! Here's how you might adjust the pages of your website to showcase these techniques:
-
 Homepage (Static Website): This is a basic static HTML page that does not include any dynamic data or interactive elements. You can serve this page directly from a CDN without involving a server at runtime.
 
 About Us (Multi Page App): A traditional web app where each page is its own HTML document. Clicking a link triggers a full page reload.
@@ -21,4 +19,3 @@ Latest Memes (Streaming SSR): The server sends the HTML to the browser in chunks
 
 Meme Series (Resumability): This feature could be implemented as a long list of memes that the user can filter and paginate. If the user leaves the page and comes back later, they can pick up where they left off.
 
-Keep in mind that implementing all these techniques in a single project might be quite challenging, since some of them are specific to certain frameworks or involve architectural decisions that could affect the entire project. For example, building a Multi Page App is a different approach compared to a Single Page App, and some techniques like Islands Architecture or Streaming SSR may require specific tools or frameworks that support them
